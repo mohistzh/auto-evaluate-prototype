@@ -8,6 +8,12 @@ class ExamResultTest(unittest.TestCase):
         print(self.exam_result.get_labels())
         pass
     
+    def test_gen_items(self):
+        """
+        docstring
+        """
+        print(self.exam_result.gen_items())
+    
     def tearDown(self):
         pass
     

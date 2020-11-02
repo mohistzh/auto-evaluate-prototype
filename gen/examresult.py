@@ -23,11 +23,17 @@ class ExamResult:
         return self._labels
     
     
-    def gen_items(count):
+    def gen_items(self):
         '''
             Generate items with the given count
             Item data structure should be more complex in Product env
             In this case, I only need to use label collection, hence the data structure like this:
             "item1": {label1, label2, label4, etc}
         '''
-        pass
+        dict = {}
+        items = random.randint(1, 100)
+        for item in range(1, items):
+            issues = random.choices(self._labels, k = random.randint(1, len(self._labels)))
+            dict[item] = issues
+        
+        return dict
