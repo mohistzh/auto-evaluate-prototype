@@ -13,6 +13,7 @@ class ExamResultTest(unittest.TestCase):
         docstring
         """
         print(self.exam_result.gen_items())
+        
     
     def tearDown(self):
         pass
