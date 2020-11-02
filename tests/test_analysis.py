@@ -5,10 +5,11 @@ class ResultAnalysisTest(unittest.TestCase):
 
     def test_intersection(self):
         exam_result = ExamResult()
-        labels = exam_result.gen_labels()
-        raw_data = exam_result.gen_items(labels)
-        analysis = ResultAnalysis(raw_data)
-        analysis.intersection(labels)
+        _labels = exam_result.gen_labels()
+        raw_data = exam_result.gen_items(_labels)
+        analysis = ResultAnalysis()
+        issues = analysis.issue_frequency(raw_data)
+        print(issues)
         
         
 

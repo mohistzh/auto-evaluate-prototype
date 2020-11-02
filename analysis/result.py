@@ -1,7 +1,6 @@
+from collections import defaultdict
 class ResultAnalysis:
-    def __init__(self, raw_data):
-        self.arr = self._one_dimention(raw_data)
-        
+    
     def _one_dimention(self, raw_data):
         arr = []
         for val in raw_data.values():
@@ -9,10 +8,16 @@ class ResultAnalysis:
         return arr
     
     
-    def intersection(self, labels):
-        '''
-            [labels] raw labels data
-        '''
-        print(self.arr)
-        pass
+    def issue_frequency(self, raw_data):
+        arr = self._one_dimention(raw_data)
+        base = len(arr)
+        issues = defaultdict(int)
+        for item in arr:
+            issues[item] += 1
+        
+        percentage = defaultdict(int)
+        for key in issues:
+            percentage[key] = str(round((issues[key] / base * 100), 2)) + '%'
+        
+        return issues, percentage
         
