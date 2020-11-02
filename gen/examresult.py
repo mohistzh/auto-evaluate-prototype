@@ -1,7 +1,6 @@
 import random
 class ExamResult:
     _instance = None
-    _labels = []
     # Singleton purpose 
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
@@ -9,7 +8,8 @@ class ExamResult:
         return cls._instance
     
     def __init__(self):
-        pass
+        self._labels = []
+        self.gen_labels()
     
     def gen_labels(self):
         '''
@@ -33,3 +33,5 @@ class ExamResult:
         pass
 
 
+obj = ExamResult()
+print(obj.get_labels())

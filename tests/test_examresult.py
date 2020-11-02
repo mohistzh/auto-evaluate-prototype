@@ -1,6 +1,6 @@
 from gen.exam_result import ExamResult
 import unittest
-from gen import ExamResult
+from gen.examresult import ExamResult
 class ExamResultTest(unittest.TestCase):
     exam_result = None
     def setUp(self):
