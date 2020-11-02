@@ -1,6 +1,7 @@
+import random
 class ExamResult:
     _instance = None
-    
+    _labels = []
     # Singleton purpose 
     def __new__(cls, *args, **kwargs):
         if cls._instance is None:
@@ -10,12 +11,18 @@ class ExamResult:
     def __init__(self):
         pass
     
-    def gen_labels():
+    def gen_labels(self):
         '''
             Generate label collections which use to associate with item
         '''
-        pass
-
+        for num in range(0, 10):
+            random_num = random.randint(1000000, 9999999)
+            self._labels.append(random_num)
+    
+    def get_labels(self):
+        return self._labels
+    
+    
     def gen_items(count):
         '''
             Generate items with the given count
