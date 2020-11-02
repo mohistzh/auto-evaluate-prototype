@@ -1,20 +1,23 @@
 import unittest
 from gen.examresult import ExamResult
+from analysis.result import ResultAnalysis
 class ExamResultTest(unittest.TestCase):
     def setUp(self):
         self.exam_result = ExamResult()
-    
-    def test_gen_labels(self):
-        print(self.exam_result.get_labels())
-        pass
-    
-    def test_gen_items(self):
-        """
-        docstring
-        """
-        print(self.exam_result.gen_items())
         
+        
+    def test_get_labels(self):
+        labels = self.exam_result.gen_labels()
+        self.assertTrue(len(labels) < 10)
+        print(labels)
     
+    def test_get_items(self):
+        labels = self.exam_result.gen_labels()
+        items = self.exam_result.gen_items(labels)
+        for key in items:
+            print(key, '=>', items[key])
+            self.assertTrue(len(items[key]) < 10)
+        
     def tearDown(self):
         pass
     
