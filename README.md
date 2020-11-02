@@ -1,4 +1,4 @@
 # Auto evaluating prototype
-> A prototype of examination paper evaluating automatically 
+> A prototype of examination paper automatically evaluation.
 
-Generating result samples => Result investigation => Analysis
+Generating item bank samples => Result investigation => Analysis
