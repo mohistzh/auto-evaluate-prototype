@@ -1,15 +1,16 @@
 import unittest
 from gen.examresult import ExamResult
 class ExamResultTest(unittest.TestCase):
-    exam_result = None
     def setUp(self):
-        exam_result = ExamResult()
-    def tearDown(self):
-        pass
+        self.exam_result = ExamResult()
     
     def test_gen_labels(self):
         print(self.exam_result.get_labels())
         pass
+    
+    def tearDown(self):
+        pass
+    
 
 if __name__ == '__main__':
     unittest.main()

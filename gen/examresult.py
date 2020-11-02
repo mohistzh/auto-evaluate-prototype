@@ -31,7 +31,3 @@ class ExamResult:
             "item1": {label1, label2, label4, etc}
         '''
         pass
-
-
-obj = ExamResult()
-print(obj.get_labels())
