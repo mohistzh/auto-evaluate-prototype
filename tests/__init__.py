@@ -1,1 +1,2 @@
 from tests.test_examresult import ExamResultTest
+from tests.test_analysis import ResultAnalysisTest
