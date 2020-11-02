@@ -1,4 +1,3 @@
-from typing import Generator
 class ExamResult:
     _instance = None
     
