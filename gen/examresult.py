@@ -1,7 +1,6 @@
 import random
 
 class ExamResult:
-    _instance = None
         
     def gen_labels(self):
         '''
