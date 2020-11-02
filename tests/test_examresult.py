@@ -1,4 +1,3 @@
-from gen.exam_result import ExamResult
 import unittest
 from gen.examresult import ExamResult
 class ExamResultTest(unittest.TestCase):
