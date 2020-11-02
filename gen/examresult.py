@@ -9,9 +9,9 @@ class ExamResult:
     
     def __init__(self):
         self._labels = []
-        self.gen_labels()
+        self._gen_labels()
     
-    def gen_labels(self):
+    def _gen_labels(self):
         '''
             Generate label collections which use to associate with item
         '''
