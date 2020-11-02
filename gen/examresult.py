@@ -31,6 +31,7 @@ class ExamResult:
             "item1": {label1, label2, label4, etc}
         '''
         dict = {}
+        # Assume we have multiple issues (use items to present it)
         items = random.randint(1, 100)
         for item in range(1, items):
             issues = random.choices(self._labels, k = random.randint(1, len(self._labels)))
