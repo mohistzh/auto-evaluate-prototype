@@ -3,7 +3,10 @@ class ResultAnalysis:
         self.arr = self._one_dimention(raw_data)
         
     def _one_dimention(self, raw_data):
-        return raw_data.values()
+        arr = []
+        for val in raw_data.values():
+            arr.extend(val)
+        return arr
     
     
     def intersection(self, labels):
